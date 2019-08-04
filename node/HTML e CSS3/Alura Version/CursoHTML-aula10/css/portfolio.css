@@ -1,0 +1,137 @@
+.page-footer {
+	background-color: #000;
+	color: #F2FFFC;
+	position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 20px;
+}
+
+main .container {
+    width: 720px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+main {
+    float: left;
+    width: 85%;
+}
+
+.uol-box, .bmw-box, .g1-box, .ibm-box {
+    border: 8px solid #000;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+h1.portfolio-title {
+    background-color: rgb(133, 25, 68);
+    padding: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    border-bottom: 8px solid black;
+}
+
+.bmw-box, .ibm-box, .g1-box, .uol-box {
+    background-color: white;
+    width: calc(50% - 8px);
+    box-sizing: border-box;
+}
+
+.bmw-box, .ibm-box {
+    float: left;
+}  
+
+.g1-box, .uol-box {
+    float: right;
+}
+
+html {
+    background-color: #f3fff9;
+}
+
+.box-descriptions {
+    padding-bottom: 30px;
+}
+
+figcaption {
+    line-height: 26px;
+    padding: 14px 0;
+    font-size: 17px;
+}
+
+img.minha-foto {
+    position: absolute;
+    right: 0;
+}
+
+.navegacao-site {
+    text-align: center;
+    background-color: rgb(60, 29, 61);
+    color: rgb(242, 255, 252);
+    float: right;
+    position: relative;
+    top: 310px;
+    width: 15%;
+}
+
+.navegacao-site h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.minha-foto, .navegacao-site {
+    float: right;
+    box-sizing: border-box;
+    border-left: 10px solid black;
+    border-bottom: 10px solid black;
+}
+
+.navegacao-site a {
+	color: inherit;
+	font-family: "Open Sans Condensed", sans-serif;
+}
+
+h1, h2 {
+    font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+
+nav a {
+    text-transform: lowercase;
+}
+
+.navegacao-site, .rodape-pagina {
+    padding: 20px;
+}
+
+.icones-redes-sociais li {
+    display: inline-block;
+}
+
+.icones-redes-sociais a {
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-indent: -99999px;
+}
+
+aside li {
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.github {
+    background-image: url(../img/github.png);
+}
+
+.twitter {
+    background-image: url(../img/twitter.png);
+}
+
+.linkedin {
+    background-image: url(../img/linkedin.png);
+}
