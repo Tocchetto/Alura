@@ -1,5 +1,5 @@
 var titulo = document.querySelector(".titulo");
-titulo.textContent = "testes";
+// titulo.textContent = "testes";
 
 var pacientes = document.querySelectorAll(".paciente");
 
@@ -26,5 +26,11 @@ for (let i = 0; i < pacientes.length; i++) {
     }else{
         imc.textContent = (peso.textContent / (altura.textContent*altura.textContent)).toFixed(2);
     }
-    
+
 }
+
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+botaoAdicionar.addEventListener("click", function(event) {
+    event.preventDefault();
+    console.log("Fui clicado!");
+});
