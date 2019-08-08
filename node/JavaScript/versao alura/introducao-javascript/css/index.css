@@ -133,7 +133,7 @@ button[disabled=disabled], button:disabled {
 	border: 1px solid red;
 }
 
-.invalid-values {
+.paciente-invalido {
 	background-color: lightcoral;
 }
 
@@ -147,8 +147,8 @@ button[disabled=disabled], button:disabled {
 }
 
 #filtrar-tabela {
-	width: 180px;
-	height: 25px;
+	width: 200px;
+	height: 35px;
 	margin-bottom: 10px;
 }
 
