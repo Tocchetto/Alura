@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        class Relogio {
+
+            constructor() {
+
+                // let self = this; // guardando o this que é a instância da classe `Relogio`
+                this._segundos = 0;
+
+                setInterval(() => console.log(++this._segundos), 1000);
+
+                // console.log(++self._segundos); // acessando a variável self, que é a instância de `Relogio` 
+            }
+        }
+
+        var relogio = new Relogio();
+
+    </script>
+</body>
+</html>
