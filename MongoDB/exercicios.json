@@ -1,0 +1,99 @@
+db.alunos.find(
+    {
+        "nome": "Felipe",
+        "data_nascimento": Date(1992, 02, 26)
+    }
+)
+
+db.alunos.find(
+    {
+        "habilidades.nome": "inglês"
+    }
+)
+
+db.alunos.find({
+    $or : [
+        {"curso.nome": "Ciências da computação"},
+        {"curso.nome": "Sistemas de informação"}
+    ]
+})
+
+db.alunos.update({"_id": ObjectId("1234565435")}, 
+{
+    "nome": "Guilherme",
+    "data_nascimento": new Date(1996, 07, 08),
+    "curso": {
+        "nome": "Ciências da Computação"
+    },
+    "habilidades": [
+        {
+            "nome": "Inglês",
+            "nível": "Avançado"
+        }
+    ] 
+}
+)
+
+db.alunos.update(
+    {"_id": ObjectId("1234565435")},
+    {
+        $set : {
+            "curso.nome": "Moda"
+        }
+    }
+)
+
+db.alunos.update(
+    {"curso.nome": "Ciências da Computação"},
+    {
+        $set : {
+            "curso.nome" : "CC"
+        }
+    },
+    {
+        multi: true
+    }
+)
+
+db.alunos.update(
+    {"_id": ObjectId("c87fbe87cf7b6wf7b8c")},
+    {
+        $push : {
+            notas: {$each: [10.0, 9.9]}
+        }
+    }
+)
+
+db.alunos.insert({
+    "nome": "Paulo",
+    "data_nascimento": new Date(1979, 12, 31),
+    "notas": [10, 9, 7],
+    "curso": {
+        "nome": "Ciências da computação"
+    },
+    "habilidades": [
+        {
+            "nome": "Inglês",
+            "nível": "Avançado"
+        },
+        {
+            "nome": "Francês",
+            "nível": "Avançado"
+        }
+    ] 
+})
+
+db.alunos.insert({
+    "nome": "Daniela",
+    "data_nascimento": new Date(1995, 07, 17),
+    "notas": [10, 9, 7],
+    "curso": {
+        "nome": "Moda"
+    },
+    "habilidades": [
+        {
+            "nome": "Alemão",
+            "nível": "Básico"
+        }
+    ] 
+})
