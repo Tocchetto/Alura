@@ -64,6 +64,39 @@ db.alunos.update(
     }
 )
 
+db.alunos.find({
+    "notas": { $lt : 5}
+})
+
+db.alunos.findOne({
+    "curso.nome": "Sistemas de informação"
+})
+
+db.alunos.find().sort({"nome": 1})
+
+mongoimport -c alunos -c alunos --jsonArray < alunos.json
+
+db.alunos.createIndex({
+    localizacao: "2dsphere"
+})
+
+db.alunos.aggregate([
+    {
+        $geoNear : {
+            near: {
+                coordinates: [-23.5640265, -46.6527128],
+                type: "Point"
+            },
+            distanceField : "disntancia.calculada",
+            spherical: true,
+            num: 4
+        }
+    },
+    {
+        $skip: 1
+    }
+])
+
 db.alunos.insert({
     "nome": "Paulo",
     "data_nascimento": new Date(1979, 12, 31),
